@@ -1,15 +1,67 @@
 <script>
+    //variable for computer selection
+    let computerSelection;
+    //function to give random computer selection
     function computerPlay() {
-        return rock;
-        return paper;
-        return scizzors;
+        let computerSelect[] = {"ROCK", "PAPER", "SCISSORS"};
+        computerSelection = computerSelect.indexOf(Math.random() * 3);
+        return computerSelection;
     }
-    
-    function game () {
-        function playGame(playerSelection, computerSelection) {
-        return outcome;
-        //make case insensitive
-        
+    computerSelection = computerPlay();
+    //variable for player selection
+    let playerSelection;
+    //input player selection
+    prompt("Please choose Rock, Paper, or Scissors" : playerSelection);
+    //make case insensitive
+    playerSelection = playerSelection.toUpperCase();
+    //function to play game
+    function playRound(playerSelection, computerPlay) {
+        while (playerSelection === "ROCK") {
+            if (computerSelection === "ROCK") {
+                return "It's a Tie";
+            } else if (computerSelection === "PAPER") {
+                return "You Lose! Paper beats Rock";
+            } else {
+                return "You Win! Rock beats Scissors";
+            }
+        }
+        while (playerSelection === "PAPER") {
+            if (computerSelection === "ROCK") {
+                return "You Win! Paper beats Rock";
+            } else if (computerSelection === "PAPER") {
+                return "It's a Tie";
+            } else {
+                return "You Lose! Scissors beats Paper";
+            }
+        }
+        while (playerSelection === "SCISSORS") {
+            if (computerSelection === "ROCK") {
+                return "You Lose! Rock beats Scissors";
+            } else if (computerSelection === "PAPER") {
+                return "You Win! Scissors beats Paper";
+            } else {
+                return "It's a Tie";
+            }
         }
     }
+    //function to run the game 
+    //
+    //output result
+    //loop to run game 5 rounds
+    //output winner
+    
+    
+    //function computerPlay() {
+    //    return rock;
+    //   return paper;
+    //   return scizzors;
+    //}
+    //
+    //function game () {
+    //    function playGame(playerSelection, computerSelection) {
+    //    return outcome;
+        //make case insensitive
+        
+    //    }
+    //}
 </script>
