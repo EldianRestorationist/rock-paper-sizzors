@@ -1,7 +1,6 @@
 <script>
     //variable for computer selection
     let computerSelection;
-    computerSelection = computerPlay();
     //function to give random computer selection
     function computerPlay() {
         let computerSelect = ["ROCK", "PAPER", "SCISSORS"];
@@ -11,7 +10,6 @@
     }
     //variable for player selection
     let playerSelection;
-    playerSelection = playerPlay();
     //input player selection
         //playerSelection = prompt("Please choose Rock, Paper, or Scissors");
     //make case insensitive
@@ -28,7 +26,9 @@
     let tieGame = 0;
     //function to play game
     function playRound(playerSelection, computerSelection) {
-        while (playerSelection === "ROCK") {
+        playerSelection = playerPlay();
+        computerSelection = computerPlay();
+        if (playerSelection === "ROCK") {
             if (computerSelection === "ROCK") {
                 tieGame += 1;
                 console.log("It's a Tie");
@@ -39,8 +39,7 @@
                 playerWin += 1;
                 console.log("Round Won! Rock beats Scissors");
             }
-        }
-        while (playerSelection === "PAPER") {
+        } else if (playerSelection === "PAPER") {
             if (computerSelection === "ROCK") {
                 playerWin += 1;
                 console.log("Round Won! Paper beats Rock");
@@ -51,8 +50,7 @@
                 computerWin += 1;
                 console.log("Round Lost! Scissors beats Paper");
             }
-        }
-        while (playerSelection === "SCISSORS") {
+        } else if (playerSelection === "SCISSORS") {
             if (computerSelection === "ROCK") {
                 computerWin += 1;
                 console.log("Round Lost! Rock beats Scissors");
@@ -63,8 +61,7 @@
                 tieGame += 1;
                 console.log("It's a Tie");
             }
-        }
-        while (playerSelection !== "ROCK" || "PAPER" || "SCISSORS") {
+        } else {
             computerWin += 1;
             console.log("Must be rock, paper, or scissors. Round Lost.");
         }
@@ -76,8 +73,8 @@
     function playGame() {
         let i = 0;
         while (i < 5) {
-            i ++;
             playRound();
+            i++;
         } 
         showWinner();
     }
