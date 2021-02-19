@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+    //variable for computer selection
+    let computerSelection;
+    //function to give random computer selection
+    function computerPlay() {
+        let computerSelect = ["ROCK", "PAPER", "SCISSORS"];
+        let randomIndex = Math.floor(Math.random() * computerSelect.length);
+        computerSelection = computerSelect[randomIndex];
+        return computerSelection;
+    }
+    //variable for player selection
+    let playerSelection;
+    //input player selection
+        //playerSelection = prompt("Please choose Rock, Paper, or Scissors");
+    //make case insensitive
+        //playerSelection = playerSelection.toUpperCase();
+    //lets put this into a function
+    function playerPlay() {
+        playerInput = prompt("Please choose Rock, Paper, or Scissors");
+        playerSelection = playerInput.toUpperCase();
+        return playerSelection;
+    }
+    //variables to keep track of wins
+    let playerWin = 0;
+    let computerWin = 0;
+    let tieGame = 0;
+    //function to play game
+    function playRound(playerSelection, computerSelection) {
+        playerSelection = playerPlay();
+        computerSelection = computerPlay();
+        if (playerSelection === "ROCK") {
+            if (computerSelection === "ROCK") {
+                tieGame += 1;
+                console.log("It's a Tie");
+            } else if (computerSelection === "PAPER") {
+                computerWin += 1;
+                console.log("Round Lost! Paper beats Rock");
+            } else {
+                playerWin += 1;
+                console.log("Round Won! Rock beats Scissors");
+            }
+        } else if (playerSelection === "PAPER") {
+            if (computerSelection === "ROCK") {
+                playerWin += 1;
+                console.log("Round Won! Paper beats Rock");
+            } else if (computerSelection === "PAPER") {
+                tieGame += 1;
+                console.log("It's a Tie");
+            } else {
+                computerWin += 1;
+                console.log("Round Lost! Scissors beats Paper");
+            }
+        } else if (playerSelection === "SCISSORS") {
+            if (computerSelection === "ROCK") {
+                computerWin += 1;
+                console.log("Round Lost! Rock beats Scissors");
+            } else if (computerSelection === "PAPER") {
+                playerWin += 1;
+                console.log("Round Won! Scissors beats Paper");
+            } else {
+                tieGame += 1;
+                console.log("It's a Tie");
+            }
+        } else {
+            computerWin += 1;
+            console.log("Must be rock, paper, or scissors. Round Lost.");
+        }
+    }
+    //function to run the game 
+        //playRound();
+    //output result
+    //loop to run game 5 rounds
+    function playGame() {
+        let i = 0;
+        while (i < 5) {
+            playRound();
+            i++;
+        } 
+        showWinner();
+    }
+    //output winner
+    function showWinner() {
+        if (playerWin > computerWin) {
+            console.log("You Win!");
+        } else if (playerWin < computerWin) {
+            console.log("You Lose!");
+        } else {
+            console.log("It was a tie");
+        }
+    }
+    //run the game
+    playGame();
+</script>
+</body>
+</html>
