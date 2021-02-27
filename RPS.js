@@ -1,8 +1,15 @@
-const playButton = document.querySelector("#playButton");
-playButton.onclick = playGame;
+const againButton = document.querySelector("#playAgain");
 const ROCK = document.querySelector("#ROCK");
 const PAPER = document.querySelector("#PAPER");
 const SCISSORS = document.querySelector("#SCISSORS");
+const tallyPlayer = document.querySelector("#tallyPlayer");
+const tallyComputer = document.querySelector("#tallyComputer");
+    
+    //variables keep track of wins
+    let playerWin = 0;
+    let computerWin = 0;
+    let tieGame;
+    let winner;
     //variable for computer selection
     let computerSelection;
     //function to give random computer selection
@@ -15,25 +22,19 @@ const SCISSORS = document.querySelector("#SCISSORS");
     //variable for player selection
     let playerSelection;
     //input player selection
-    function playerPlay() {
-        ROCK.addEventListener('click', () => {
-            playerSelection = "ROCK";
-        });
-        PAPER.addEventListener('click', () => {
-            playerSelection = "PAPER";
-        });
-        SCISSORS.addEventListener('click', () => {
-            playerSelection = "SCISSORS";
-        });
-        return playerSelection;
-    };
-    //variables to keep track of wins
-    let playerWin = 0;
-    let computerWin = 0;
-    let tieGame = 0;
+    
+    ROCK.addEventListener('click', () => {
+        playRound("ROCK");
+    });
+    PAPER.addEventListener('click', () => {
+        playRound("PAPER");
+    });
+    SCISSORS.addEventListener('click', () => {
+        playRound("SCISSORS");
+    });
+    
     //function to play game
     function playRound(playerSelection, computerSelection) {
-        playerSelection = playerPlay();
         computerSelection = computerPlay();
         if (playerSelection === "ROCK") {
             if (computerSelection === "ROCK") {
@@ -71,25 +72,28 @@ const SCISSORS = document.querySelector("#SCISSORS");
         } else {
             gameNarrative.textContent += "Error Try Again";
         }
-
+        tallyPlayer.textContent = playerWin;
+        tallyComputer.textContent = computerWin;
+        showWinner;
     }
     //function to run the game 
         //playRound();
     //output result
-    //loop to run game 5 rounds
-    function playGame() {
-        let i = 0;
-        while ((playerWin < 5) && (computerWin < 5) && (i < 30)) {
-            playRound();
-            i++;
-        } 
-        showWinner();
+    //function to restart game
+    function playAgain() {
+     //empty text box
+     gameNarrative.textContent = "Please choose Rock, Paper, or Scizzors";
+     //zero out counters
+     playerWin = 0;
+     computerWin = 0;
     }
+    againButton.onclick = playAgain();
     //output winner
     function showWinner() {
-        if (playerWin > computerWin) {
-            gameNarrative.textContent += "You Win!";
-        } else {
-            gameNarrative.textContent += "You Lose!";
+        if (playerWin >= 5) {
+            gameNarrative.textContent = "You Win!";
+        } 
+        if (computerWin >= 5) {
+            gameNarrative.textContent = "You Lose!";
         }
     }
