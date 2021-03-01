@@ -3,31 +3,48 @@
 <head>
     <title>Rock Paper Scissors</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="cssStyles.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-    <div id="header">
-        <h1 id="title">Rock Paper Scissors</h1>
+<body id="body">
+    <div id="header" class="header">
+        <h1 id="title" class="title">Rock Paper Scissors</h1>
     </div>
-    <div id="playerWin">Player Wins</div>
-    <div id="playerTally">
-        <p id="tallyPlayer"></p>
-    </div>
-    <div id="ComputerWin">Computer Wins</div>
-    <div id="computerTally">
-        <p id="tallyComputer"></p>
+
+    <div id="tallies">
+        <div id="playerBox">
+            <img id="scouts" src="imgs/scouts2.png" alt="the scout regiment ready to battle">
+            <div id="playerWin">Player Wins</div>
+            <div id="playerTally">
+                <p id="tallyPlayer"></p>
+            </div>
+        </div>
+        <div id="centerPic">
+            <img id="erwinPic" src="imgs/erwin.jpg" alt="leader erwin commanding his troops to advance heroically">
+        </div>
+        <div id="compBox">
+            <img id="titans" src="imgs/titans.jpg" alt="pic of some scary titans">
+            <div id="ComputerWin">Computer Wins</div>
+            <div id="computerTally">
+                <p id="tallyComputer"></p>
+            </div>
+        </div>
     </div>
     
-    <div id="text">
-        <p id="gameNarrative">Pick Rock Paper or Scissors</p>
-    </div>
-    <div id="playerButtons">
-        <button id="ROCK">Rock</button>
-        <button id="PAPER">Paper</button>
-        <button id="SCISSORS">Scissors</button>
-    </div>
-    <div>
-        <button id="playAgain">Play Again</button>
+    <div id="gamePlay">
+        <div id="text">
+            <p id="gameNarrative">Pick Rock Paper or Scissors</p>
+        </div>
+        <div id="playerButtons">
+            <button id="ROCK">Rock</button>
+            <button id="PAPER">Paper</button>
+            <button id="SCISSORS">Scissors</button>
+        </div>
+        <div>
+            <button id="playAgain">Play Again</button>
+        </div>
+        <div id="winnerPic">
+        </div>
     </div>
 <script src="RPS.js">
 </script>
