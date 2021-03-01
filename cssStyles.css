@@ -1,0 +1,60 @@
+#body {
+    /*background-image: url("imgs/ymir.jpeg");*/
+}
+.title {
+    background: url("imgs/topwall.jpeg");
+    display:flex;
+    justify-content: center;
+    height: 5em;
+    margin: 0;
+    background-position: center;
+    align-items: center;
+}
+#tallies {
+    width: 100%;
+    display: flex;
+    height:fit-content;
+    justify-content: space-between;
+}
+#playerBox {
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+#scouts {
+    width: 35%;
+    height: 35%;
+    align-self: center;
+    justify-self: center;
+}
+#playerWin {
+    align-self: center;
+}
+#centerPic {
+    align-self: center;
+    justify-self: center;
+}
+#compBox {
+    align-content: center;
+    justify-content: center;
+}
+#ROCK {
+    border-radius: 50%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 46px;
+}
+#PAPER {
+    border-radius: 50%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 150px;
+    width: 150px;
+    margin: 5em;
+}
+#SCISSORS {
+    border-radius: 50%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 10em;
+}
