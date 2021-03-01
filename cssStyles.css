@@ -1,42 +1,96 @@
 #body {
     /*background-image: url("imgs/ymir.jpeg");*/
 }
+#header {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    max-height: 10em;
+}
 .title {
-    background: url("imgs/topwall.jpeg");
-    display:flex;
     justify-content: center;
-    height: 5em;
-    margin: 0;
-    background-position: center;
+    grid-column: 2/4;
+    grid-row: 2/4;
     align-items: center;
+    text-align: center;
+    text-justify: center;
+    order: 1;
 }
-#tallies {
+#wide {
+    grid-column: 1/5;
+    grid-row: 1/5;
+    max-height: 100%;
     width: 100%;
-    display: flex;
-    height:fit-content;
-    justify-content: space-between;
-}
-#playerBox {
-    display:flex;
-    align-content: center;
-    justify-content: center;
-}
-#scouts {
-    width: 35%;
-    height: 35%;
     align-self: center;
     justify-self: center;
 }
-#playerWin {
+#tallies {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    justify-content: space-between;
+    padding: 1em 1em;
+    height: 20em;
+}
+#playerBox {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+#scouts {
+    width: 100%;
     align-self: center;
+    justify-self: center;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+#playerWin {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+}
+#playerTally {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
 }
 #centerPic {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+#erwinPic {
+    grid-row: 1/3;
+    grid-column: 1/3;
     align-self: center;
     justify-self: center;
 }
 #compBox {
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+#titans {
+    grid-row: 2/4;
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+#computerWin {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+}
+#computerTally {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
 }
 #ROCK {
     border-radius: 50%;
