@@ -1,26 +1,62 @@
 #body {
-    /*background-image: url("imgs/ymir.jpeg");*/
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
 }
 #header {
     display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
     max-height: 10em;
+    max-width: 100%;
 }
 .title {
     justify-content: center;
-    grid-column: 2/4;
-    grid-row: 2/4;
+    grid-column: 3/4;
+    grid-row: 3/4;
     align-items: center;
     text-align: center;
     text-justify: center;
     order: 1;
 }
-#wide {
-    grid-column: 1/5;
-    grid-row: 1/5;
+#titans3 {
+    grid-column: 1/2;
+    grid-row: 1/6;
     max-height: 100%;
-    width: 100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+#ymir {
+    grid-column: 5/6;
+    grid-row: 1/6;
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+#wide {
+    grid-column: 3/4;
+    grid-row: 1/6;
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+#topwall {
+    grid-column: 2/3;
+    grid-row: 1/6;
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+#titans2 {
+    grid-column: 4/5;
+    grid-row: 1/6;
+    max-height: 100%;
+    max-width: 100%;
     align-self: center;
     justify-self: center;
 }
@@ -49,12 +85,14 @@
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
+    color: white;
 }
 #playerTally {
     grid-column: 3/4;
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
+    color: white;
 }
 #centerPic {
     display: grid;
@@ -66,6 +104,7 @@
     grid-column: 1/3;
     align-self: center;
     justify-self: center;
+    max-width: 100%;
 }
 #compBox {
     display: grid;
@@ -85,30 +124,105 @@
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
+    color: white;
 }
 #computerTally {
     grid-column: 3/4;
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
+    color: white;
+}
+#gamePlay {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    height: 18em;
+    max-height: 100%;
+    width: 100vw;
+}
+#text {
+    color: white;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    position: center;
+}
+#gameNarrative {
+    text-align: center;
+}
+#playerButtons {
+    grid-column: 2/4;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+#rockButton {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 40%;
 }
 #ROCK {
+    align-self: center;
+    justify-self: center;
     border-radius: 50%;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    height: 46px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#paperButton {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 20%;
 }
 #PAPER {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: center;
     border-radius: 50%;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    height: 150px;
-    width: 150px;
-    margin: 5em;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#scissorsButton {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 40%;
 }
 #SCISSORS {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    position: center;
     border-radius: 50%;
     padding-top: 6px;
-    padding-bottom: 6px;
-    height: 10em;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+#again {
+    grid-row: 5/6;
+    grid-column: 2/4;
+    align-self: center;
+    justify-self: center;
 }
