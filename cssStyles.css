@@ -167,6 +167,13 @@ h1 {
     height: 100%;
     width: 18em;
     padding: 0px;
+    color: white;
+    background-color: black;
+    background-image: url(/imgs/rockfinal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: cover;
 }
 #PAPER {
     border-radius: 50%;
@@ -175,6 +182,12 @@ h1 {
     height: 100%;
     width: 18em;
     padding: 0px;
+    background-color: black;
+    background-image: url(/imgs/paperfinal2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-size:contain;
 }
 #SCISSORS {
     min-width: 1.5em;
@@ -183,6 +196,13 @@ h1 {
     height: 100%;
     width: 18em;
     padding: 0px;
+    color: white;
+    background-color: black;
+    background-image: url(/imgs/scissorsfinal2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-size:contain;
 }
 @media only screen and (max-width: 768px) {
     #header {
