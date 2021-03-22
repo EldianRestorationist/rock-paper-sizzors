@@ -59,8 +59,8 @@ h1 {
 #titans2 {
     grid-column: 4/5;
     grid-row: 1/6;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 90%;
+    max-width: 90%;
     align-self: center;
     justify-self: center;
 }
@@ -169,7 +169,7 @@ h1 {
     padding: 0px;
     color: white;
     background-color: black;
-    background-image: url(/imgs/rockfinal.png);
+    background-image: url(/imgs/rockfinal3.png);
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -182,8 +182,9 @@ h1 {
     height: 100%;
     width: 18em;
     padding: 0px;
+    color: white;
     background-color: black;
-    background-image: url(/imgs/paperfinal2.png);
+    background-image: url(/imgs/paperfinal3.png);
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -206,7 +207,7 @@ h1 {
 }
 @media only screen and (max-width: 768px) {
     #header {
-        height: 8em;
+        height: 6em;
         display: grid;
         grid-template-columns: 30% 40% 30%;
         grid-template-rows: 25% 50% 25%;
@@ -316,6 +317,10 @@ h1 {
     #titans {
         width: 90%;
     }
+    #topwall {
+        max-width: 90%;
+        max-height: 90%;
+    }
 }
 @media only screen and (max-width: 1040px) {
     h1 {
@@ -324,7 +329,7 @@ h1 {
 }
 @media only screen and (max-width: 425px) {
     #header {
-        height: 3em;
+        height: 2.5em;
     }
     #ROCK {
         border-radius: 50%;
@@ -343,6 +348,14 @@ h1 {
         height: 8em;
         width: 8em;
         padding: 0px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    #header {
+        height: 2em;
+    }
+    .title {
+        font-size: 40%;
     }
 }
 #again {
