@@ -36,36 +36,36 @@ const tallyComputer = document.querySelector("#tallyComputer");
         computerSelection = computerPlay();
             if (playerSelection === "ROCK") {
                 if (computerSelection === "ROCK") {
-                    gameNarrative.textContent += "\nIt's a Tie";
+                    gameNarrative.textContent = "\nIt's a Tie";
                 } else if (computerSelection === "PAPER") {
                     computerWin += 1;
-                    gameNarrative.textContent += "\nRound Lost! Paper beats Rock";
+                    gameNarrative.textContent = "\nRound Lost! Paper beats Rock";
                 } else {
                     playerWin += 1;
-                    gameNarrative.textContent += "\nRound Won! Rock beats Scissors";
+                    gameNarrative.textContent = "\nRound Won! Rock beats Scissors";
                 }
             } else if (playerSelection === "PAPER") {
                 if (computerSelection === "ROCK") {
                     playerWin += 1;
-                    gameNarrative.textContent += "\nRound Won! Paper beats Rock";
+                    gameNarrative.textContent = "\nRound Won! Paper beats Rock";
                 } else if (computerSelection === "PAPER") {
-                    gameNarrative.textContent += "\nIt's a Tie";
+                    gameNarrative.textContent = "\nIt's a Tie";
                 } else {
                     computerWin += 1;
-                    gameNarrative.textContent += "\nRound Lost! Scissors beats Paper";
+                    gameNarrative.textContent = "\nRound Lost! Scissors beats Paper";
                 }
             } else if (playerSelection === "SCISSORS") {
                 if (computerSelection === "ROCK") {
                     computerWin += 1;
-                    gameNarrative.textContent += "\nRound Lost! Rock beats Scissors";
+                    gameNarrative.textContent = "\nRound Lost! Rock beats Scissors";
                 } else if (computerSelection === "PAPER") {
                     playerWin += 1;
-                    gameNarrative.textContent += "\nRound Won! Scissors beats Paper";
+                    gameNarrative.textContent = "\nRound Won! Scissors beats Paper";
                 } else {
-                    gameNarrative.textContent += "\nIt's a Tie";
+                    gameNarrative.textContent = "\nIt's a Tie";
                 }
             } else {
-                gameNarrative.textContent += "Error Try Again";
+                gameNarrative.textContent = "Error Try Again";
             }
         //add tallies
         tallyPlayer.textContent = playerWin;
@@ -92,7 +92,7 @@ const tallyComputer = document.querySelector("#tallyComputer");
     //output winner
     function showWinner() {
         if (playerWin >= 5) {
-            gameNarrative.textContent += "You Win!";
+            gameNarrative.textContent += "\nYou Win!";
             disableButtons();
         } 
         if (computerWin >= 5) {
