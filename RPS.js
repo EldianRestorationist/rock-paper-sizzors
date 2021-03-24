@@ -4,7 +4,8 @@ const PAPER = document.querySelector("#PAPER");
 const SCISSORS = document.querySelector("#SCISSORS");
 const tallyPlayer = document.querySelector("#tallyPlayer");
 const tallyComputer = document.querySelector("#tallyComputer");
-    
+const winPic = document.querySelector("#winPic");
+
     //variables keep track of wins
     let playerWin = 0;
     let computerWin = 0;
@@ -36,33 +37,33 @@ const tallyComputer = document.querySelector("#tallyComputer");
         computerSelection = computerPlay();
             if (playerSelection === "ROCK") {
                 if (computerSelection === "ROCK") {
-                    gameNarrative.textContent = "\nIt's a Tie";
+                    gameNarrative.textContent = "\nThe titan has also chosen Rock! It's a Tie!";
                 } else if (computerSelection === "PAPER") {
                     computerWin += 1;
-                    gameNarrative.textContent = "\nRound Lost! Paper beats Rock";
+                    gameNarrative.textContent = "\nThe titan used Paper, Paper beats Rock! Round lost!";
                 } else {
                     playerWin += 1;
-                    gameNarrative.textContent = "\nRound Won! Rock beats Scissors";
+                    gameNarrative.textContent = "\nThe titan chose Scissors, Rock pummels Scissors! Round Won!";
                 }
             } else if (playerSelection === "PAPER") {
                 if (computerSelection === "ROCK") {
                     playerWin += 1;
-                    gameNarrative.textContent = "\nRound Won! Paper beats Rock";
+                    gameNarrative.textContent = "\nThe titan chose Rock, Paper beats Rock! Round Won!";
                 } else if (computerSelection === "PAPER") {
-                    gameNarrative.textContent = "\nIt's a Tie";
+                    gameNarrative.textContent = "\nThe titan also used Paper! It's a Tie!";
                 } else {
                     computerWin += 1;
-                    gameNarrative.textContent = "\nRound Lost! Scissors beats Paper";
+                    gameNarrative.textContent = "\nThe titan chose Scissors! Scissors slice Paper! Round Lost!";
                 }
             } else if (playerSelection === "SCISSORS") {
                 if (computerSelection === "ROCK") {
                     computerWin += 1;
-                    gameNarrative.textContent = "\nRound Lost! Rock beats Scissors";
+                    gameNarrative.textContent = "\nThe titan chose Rock, Rock pummels Scissors! Round Lost!";
                 } else if (computerSelection === "PAPER") {
                     playerWin += 1;
-                    gameNarrative.textContent = "\nRound Won! Scissors beats Paper";
+                    gameNarrative.textContent = "\nThe titan used Paper, Scissors slice Paper! Round Won!";
                 } else {
-                    gameNarrative.textContent = "\nIt's a Tie";
+                    gameNarrative.textContent = "\nThe titan also chose Scissors! It's a Tie!";
                 }
             } else {
                 gameNarrative.textContent = "Error Try Again";
@@ -77,7 +78,7 @@ const tallyComputer = document.querySelector("#tallyComputer");
     //function to restart game
     function playAgain() {
      //empty text box
-     gameNarrative.textContent = "Please choose Rock, Paper, or Scizzors";
+     gameNarrative.textContent = "Choose your weapon: Rock, Paper, or Scizzors";
      //zero out counters
      playerWin = 0;
      computerWin = 0;
@@ -85,6 +86,7 @@ const tallyComputer = document.querySelector("#tallyComputer");
      tallyComputer.textContent = computerWin;
      //turn buttons back on
      enableButtons();
+     hidePic();
     }
     //assign playAgain
     againButton.onclick = playAgain;
@@ -92,12 +94,14 @@ const tallyComputer = document.querySelector("#tallyComputer");
     //output winner
     function showWinner() {
         if (playerWin >= 5) {
-            gameNarrative.textContent += "\nYou Win!";
+            gameNarrative.textContent += "\nYou have defeated the titan! You Win!";
             disableButtons();
+            showPic();
         } 
         if (computerWin >= 5) {
-            gameNarrative.textContent += "You Lose!";
+            gameNarrative.textContent += "\nThe titan has defeated you. You have become titan fodder.";
             disableButtons();
+            showPic();
         }
     }
     //turn buttons on/off
@@ -110,4 +114,11 @@ const tallyComputer = document.querySelector("#tallyComputer");
         ROCK.disabled = false;
         PAPER.disabled = false;
         SCISSORS.disabled = false;
+    }
+    //function show win pic
+    function showPic() {
+        winPic.style.visibility = "visible";
+    }
+    function hidePic() {
+        winPic.style.visibility = "hidden";
     }
