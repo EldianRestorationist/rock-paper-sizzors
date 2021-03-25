@@ -133,6 +133,7 @@ h1 {
     justify-self: center;
     max-width: 45%;
     visibility: hidden;
+    transition: visibility 1.75s ease-in, opacity 2s ease-in;
 }
 #compBox {
     display: grid;
