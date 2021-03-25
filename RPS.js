@@ -5,6 +5,7 @@ const SCISSORS = document.querySelector("#SCISSORS");
 const tallyPlayer = document.querySelector("#tallyPlayer");
 const tallyComputer = document.querySelector("#tallyComputer");
 const winPic = document.querySelector("#winPic");
+const erwinPic = document.querySelector("#erwinPic")
 
     //variables keep track of wins
     let playerWin = 0;
@@ -117,8 +118,14 @@ const winPic = document.querySelector("#winPic");
     }
     //function show win pic
     function showPic() {
+        erwinPic.style.visibility = "hidden";
+        erwinPic.style.opactiy = "0";
         winPic.style.visibility = "visible";
+        winPic.style.opacity = "1";
     }
     function hidePic() {
+        erwinPic.style.visibility = "visible";
+        erwinPic.stye.visibility = "1";
         winPic.style.visibility = "hidden";
+        winPic.style.opacity = "0";
     }
