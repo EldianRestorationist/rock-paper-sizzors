@@ -15,6 +15,12 @@
 h1 {
     font-size: 67%;
 }
+@font-face {
+    font-family: 'CloisterBlack';
+    src: url('fonts/CloisterBlack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .title {
     justify-content: center;
     grid-column: 3/4;
@@ -23,6 +29,7 @@ h1 {
     text-align: center;
     text-justify: center;
     order: 1;
+    font-family: 'CloisterBlack';
 }
 #titans3 {
     grid-column: 1/2;
@@ -71,6 +78,15 @@ h1 {
     justify-content: space-between;
     padding: 0em;
     height: 20em;
+}
+@font-face {
+    font-family: 'EvilGenius';
+    src: url('fonts/EvilGeniusBB-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.gameText {
+    font-family: 'EvilGenius';
 }
 #playerBox {
     display: grid;
@@ -125,6 +141,8 @@ h1 {
     align-self: center;
     justify-self: center;
     max-width: 100%;
+    opacity: 1;
+    transition: opacity 1.75s ease-in;
 }
 #winPic {
     grid-row: 1/3;
@@ -132,8 +150,8 @@ h1 {
     align-self: center;
     justify-self: center;
     max-width: 45%;
-    visibility: hidden;
-    transition: visibility 1.75s ease-in, opacity 2s ease-in;
+    opacity: 0;
+    transition: opacity 1.75s ease-in;
 }
 #compBox {
     display: grid;
