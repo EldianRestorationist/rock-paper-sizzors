@@ -118,14 +118,14 @@ const erwinPic = document.querySelector("#erwinPic")
     }
     //function show win pic
     function showPic() {
+        erwinPic.style.opactiy = 0;
         erwinPic.style.visibility = "hidden";
-        erwinPic.style.opactiy = "0";
+        winPic.style.opacity = 1;
         winPic.style.visibility = "visible";
-        winPic.style.opacity = "1";
     }
     function hidePic() {
-        erwinPic.style.visibility = "visible";
-        erwinPic.stye.visibility = "1";
+        erwinPic.style.opacity = 1;
+        erwinPic.style.visibility = "visible"; 
+        winPic.style.opacity = 0;
         winPic.style.visibility = "hidden";
-        winPic.style.opacity = "0";
     }
