@@ -291,6 +291,9 @@ h1 {
     #winPic {
         max-width: 60%;
     }
+    .gameText {
+        font-size: 67%;
+    }
 }
 @media only screen and (max-width: 1040px) {
     h1 {
@@ -325,6 +328,9 @@ h1 {
         justify-content: center;
         align-content: center;
         margin: auto;
+    }
+    .gameText {
+        font-size: 64%;
     }
     #titans3 {
         display: none;
@@ -395,6 +401,10 @@ h1 {
     #tallyComputer {
         margin: 0;
     }
+    #gameNarrative {
+        position: relative;
+        top: 20%;
+    }
 }
 @media only screen and (max-width: 725px) {
     #playerButtons {
@@ -433,11 +443,11 @@ h1 {
     }
     #fiveText {
         width: 100vw;
-        bottom: 50%;
+        bottom: 35%;
     }
     #fightText {
         width: 100vw;
-        bottom: 25%;
+        bottom: 10%;
     }
     #winPic {
         align-self: end;
