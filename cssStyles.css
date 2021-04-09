@@ -270,6 +270,9 @@ h1 {
     box-shadow: none;
     outline: 0;
 }
+.buttons:hover {
+    box-shadow: 0 0 20px  white;
+}
 #again {
     display: flex;
     align-self: center;
