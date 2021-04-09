@@ -31,10 +31,17 @@ h1 {
     order: 1;
     font-family: 'CloisterBlack';
 }
+.headerPics {
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    height: 90%;
+    width: 97%;
+}
 #titans3 {
     grid-column: 1/2;
     grid-row: 1/6;
-    max-height: 100%;
+    max-height: 90%;
     max-width: 100%;
     align-self: center;
     justify-self: center;
@@ -42,7 +49,7 @@ h1 {
 #ymir {
     grid-column: 5/6;
     grid-row: 1/6;
-    max-height: 100%;
+    max-height: 90%;
     max-width: 100%;
     align-self: center;
     justify-self: center;
@@ -67,7 +74,7 @@ h1 {
     grid-column: 4/5;
     grid-row: 1/6;
     max-height: 90%;
-    max-width: 90%;
+    max-width: 100%;
     align-self: center;
     justify-self: center;
 }
@@ -99,6 +106,7 @@ h1 {
     justify-self: center;
     grid-column: 1/5;
     grid-row: 2/4;
+    max-width: 100%;
 }
 #playerWin {
     grid-column: 2/3;
@@ -141,6 +149,7 @@ h1 {
     align-self: center;
     justify-self: center;
     max-width: 100%;
+    max-height: 100%;
     opacity: 1;
     transition: opacity 1.75s ease-in;
 }
@@ -150,6 +159,7 @@ h1 {
     align-self: center;
     justify-self: center;
     max-width: 45%;
+    max-height: 100%;
     opacity: 0;
     transition: opacity 1.75s ease-in;
 }
@@ -278,16 +288,6 @@ h1 {
     h1 {
         font-size: 50%;
     }
-    #scouts {
-        width: 90%;
-    }
-    #titans {
-        width: 90%;
-    }
-    #topwall {
-        max-width: 90%;
-        max-height: 90%;
-    }
     #winPic {
         max-width: 60%;
     }
@@ -295,9 +295,12 @@ h1 {
         font-size: 67%;
     }
 }
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1024px) {
     h1 {
         font-size: 35%;
+    }
+    #scouts {
+        width: 85%;
     }
     #fiveText {
         width: 150%;
@@ -309,6 +312,9 @@ h1 {
     }
     #winPic {
         max-width: 79%;
+    }
+    #titans {
+        width: 85%;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -351,7 +357,7 @@ h1 {
         grid-row: 2/3;
     }
     #tallies {
-        height: 10em;
+        height: 12em;
     }
     #scouts {
         grid-column: 1/5;
@@ -378,11 +384,11 @@ h1 {
     }
     #fiveText {
         position: relative;
-        bottom: 90%;
+        bottom: 80%;
     }
     #fightText {
         position: relative;
-        bottom: 70%;
+        bottom: 60%;
         top:auto;
     }
     #winPic {
@@ -400,10 +406,6 @@ h1 {
     }
     #tallyComputer {
         margin: 0;
-    }
-    #gameNarrative {
-        position: relative;
-        top: 20%;
     }
 }
 @media only screen and (max-width: 725px) {
@@ -438,19 +440,27 @@ h1 {
     #header {
         height: 2.5em;
     }
+    .headerPics {
+        border-width: .5%;
+    }
     #erwinPic {
         align-self: end;
+        position: relative;
+        bottom: 20%;
     }
     #fiveText {
         width: 100vw;
-        bottom: 35%;
+        bottom: 25%;
     }
     #fightText {
         width: 100vw;
-        bottom: 10%;
+        bottom: 7%;
     }
     #winPic {
         align-self: end;
+    }
+    .gameText {
+        font-size: 50%;
     }
     #ROCK {
         border-radius: 50%;
@@ -471,7 +481,18 @@ h1 {
         padding: 0px;
     }
 }
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 375px) {
+    #playerWin {
+        grid-column: 1/4;
+    }
+    #erwinPic {
+        bottom: 30%;
+    }
+    #playerTally {
+        grid-column: 4/5;
+    }
+}
+@media only screen and (max-width: 320px) {
     #header {
         height: 2em;
     }
@@ -479,10 +500,10 @@ h1 {
         font-size: 40%;
     }
     #fiveText {
-        bottom: 40%;
+        bottom: 30%;
     }
     #fightText {
-        bottom: 15%;
+        bottom: 10%;
     }
 }
 @media only screen and (min-width: 500px) {
