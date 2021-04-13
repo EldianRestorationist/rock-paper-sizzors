@@ -30,6 +30,7 @@ h1 {
     text-justify: center;
     order: 1;
     font-family: 'CloisterBlack';
+    text-shadow: 0px 0px 7px white;
 }
 .headerPics {
     border-color: white;
@@ -271,7 +272,7 @@ h1 {
     outline: 0;
 }
 .buttons:hover {
-    box-shadow: 0 0 20px  white;
+    box-shadow: 0 0 20px  white !important;
 }
 #again {
     display: flex;
