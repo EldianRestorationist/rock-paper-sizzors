@@ -5,7 +5,8 @@ const SCISSORS = document.querySelector("#SCISSORS");
 const tallyPlayer = document.querySelector("#tallyPlayer");
 const tallyComputer = document.querySelector("#tallyComputer");
 const winPic = document.querySelector("#winPic");
-const erwinPic = document.querySelector("#erwinPic")
+const erwinPic = document.querySelector("#erwinPic");
+const losePic = document.querySelector("#losePic");
 
     //variables keep track of wins
     let playerWin = 0;
@@ -97,12 +98,12 @@ const erwinPic = document.querySelector("#erwinPic")
         if (playerWin >= 5) {
             gameNarrative.textContent += "\nYou have defeated the titan! You Win!";
             disableButtons();
-            showPic();
+            showWin();
         } 
         if (computerWin >= 5) {
             gameNarrative.textContent += "\nThe titan has defeated you. You have become titan fodder.";
             disableButtons();
-            showPic();
+            showLose();
         }
     }
     //turn buttons on/off
@@ -117,15 +118,23 @@ const erwinPic = document.querySelector("#erwinPic")
         SCISSORS.disabled = false;
     }
     //function show win pic
-    function showPic() {
+    function showWin() {
         erwinPic.style.opactiy = 0;
         erwinPic.style.visibility = "hidden";
         winPic.style.opacity = 1;
         winPic.style.visibility = "visible";
+    }
+    function showLose() {
+        erwinPic.style.opacity = 0;
+        erwinPic.style.visibility = "hidden";
+        losePic.style.opacity = 1;
+        losePic.style.visibility = "visible";
     }
     function hidePic() {
         erwinPic.style.opacity = 1;
         erwinPic.style.visibility = "visible"; 
         winPic.style.opacity = 0;
         winPic.style.visibility = "hidden";
+        losePic.style.opacity = 0;
+        losePic.style.visibility = "hidden";
     }
