@@ -40,32 +40,41 @@ const losePic = document.querySelector("#losePic");
             if (playerSelection === "ROCK") {
                 if (computerSelection === "ROCK") {
                     gameNarrative.textContent = "\nThe titan has also chosen Rock! It's a Tie!";
+                    showText();
                 } else if (computerSelection === "PAPER") {
                     computerWin += 1;
                     gameNarrative.textContent = "\nThe titan used Paper, Paper beats Rock! Round lost!";
+                    showText();
                 } else {
                     playerWin += 1;
                     gameNarrative.textContent = "\nThe titan chose Scissors, Rock pummels Scissors! Round Won!";
+                    showText();
                 }
             } else if (playerSelection === "PAPER") {
                 if (computerSelection === "ROCK") {
                     playerWin += 1;
                     gameNarrative.textContent = "\nThe titan chose Rock, Paper beats Rock! Round Won!";
+                    showText();
                 } else if (computerSelection === "PAPER") {
                     gameNarrative.textContent = "\nThe titan also used Paper! It's a Tie!";
+                    showText();
                 } else {
                     computerWin += 1;
                     gameNarrative.textContent = "\nThe titan chose Scissors! Scissors slice Paper! Round Lost!";
+                    showText();
                 }
             } else if (playerSelection === "SCISSORS") {
                 if (computerSelection === "ROCK") {
                     computerWin += 1;
                     gameNarrative.textContent = "\nThe titan chose Rock, Rock pummels Scissors! Round Lost!";
+                    showText();
                 } else if (computerSelection === "PAPER") {
                     playerWin += 1;
                     gameNarrative.textContent = "\nThe titan used Paper, Scissors slice Paper! Round Won!";
+                    showText();
                 } else {
                     gameNarrative.textContent = "\nThe titan also chose Scissors! It's a Tie!";
+                    showText();
                 }
             } else {
                 gameNarrative.textContent = "Error Try Again";
@@ -137,4 +146,9 @@ const losePic = document.querySelector("#losePic");
         winPic.style.visibility = "hidden";
         losePic.style.opacity = 0;
         losePic.style.visibility = "hidden";
+    }
+    function showText() {
+        gameNarrative.animate({
+            opacity: [0, 1]
+        }, 1000);
     }
