@@ -235,7 +235,7 @@ h1 {
 }
 #ROCK {
     background-color: black;
-    background-image: url(/imgs/rockfinal3.png);
+    background-image: url("/imgs/rockfinal3.png");
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -249,7 +249,7 @@ h1 {
 }
 #PAPER {
     background-color: black;
-    background-image: url(/imgs/paperfinal3.png);
+    background-image: url("/imgs/paperfinal3.png");
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -261,7 +261,7 @@ h1 {
 }
 #SCISSORS {
     background-color: black;
-    background-image: url(/imgs/scissorsfinal2.png);
+    background-image: url("/imgs/scissorsfinal2.png");
     background-position: center;
     background-repeat: no-repeat;
     border: none;
